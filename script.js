@@ -1,11 +1,13 @@
 var grid = document.getElementById("container");
-const button = document.getElementById('reset');
+const button1 = document.getElementById('reset');
+const button2  = document.getElementById('colorset');
 var z = 0;
 const container = document.getElementById('container');
+GenColor  = "Blue";
+const title = document.getElementById('head');
 
 
-
-button.addEventListener('click', (e) => {         
+button1.addEventListener('click', (e) => {         
     
     
     let x = prompt('Enter pixels per unit');
@@ -26,10 +28,10 @@ button.addEventListener('click', (e) => {
             divi.style.cssText = 'display: inline-block;vertical-align: middle;text-align: center;background-color: white;  height: ' + y + 'px; width: ' + y +' px;';
             container.appendChild(divi);
             divi.addEventListener('mouseover', (e) => {
-                divi.style.backgroundColor  =  "" + getRandomColor() + "" ;
+                divi.style.backgroundColor  =  "" + GenColor + "" ;
             });
-            const button = document.getElementById('reset');
-            button.addEventListener('click', (e) => {
+            const button1 = document.getElementById('reset');
+            button1.addEventListener('click', (e) => {
                 divi.style.backgroundColor = "White";
             });
         
@@ -60,10 +62,10 @@ for(var i=0; i<16;i++)
             divi.style.cssText = 'display: inline-block;vertical-align: middle;text-align: center;background-color: white;  height: ' + 40 + 'px; width: ' + 40 +' px;';
             container.appendChild(divi);
             divi.addEventListener('mouseover', (e) => {
-                divi.style.backgroundColor  = " " + getRandomColor() + ""; 
+                divi.style.backgroundColor  = " " + GenColor + ""; 
             });
-            const button = document.getElementById('reset');
-            button.addEventListener('click', (e) => {
+            const button1 = document.getElementById('reset');
+            button1.addEventListener('click', (e) => {
                 divi.style.backgroundColor = "White";
             });
         
@@ -71,11 +73,19 @@ for(var i=0; i<16;i++)
 
     }
 
-    function getRandomColor(){
-        var letters = '0123456789ABCDEF';
+
+
+
+button2.addEventListener('click', (e) => {    
+
+
+var letters = '0123456789ABCDEF';
         var color = '#';
         for (var i = 0; i < 6; i++) {
         color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
-}
+		
+		}
+		GenColor=color;
+		head.style.color=GenColor;
+		
+});
