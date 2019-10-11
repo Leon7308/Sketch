@@ -2,7 +2,10 @@
 {
     height: 640px;
     width: 640px;
-    
+    display: block;
+    margin-left: auto;
+    margin-right: auto ;
+	
 }
 
 body{
@@ -12,4 +15,32 @@ body{
 .square 
 {
     
+}
+
+#head{
+  color: blue;
+  font-family: courier;
+  font-size: 300%;
+  text-align: center;
+	
+}
+
+
+#reset{
+	  display: block;
+    margin-left: auto;
+    margin-right: auto ;
+		height: 30px;
+		width: 90px;
+		margin-top: 3%;
+
+}
+
+#colorset{
+	  display: block;
+    margin-left: auto;
+    margin-right: auto ;
+		height: 30px;
+		width: 180px;
+		margin-top: 1%;
 }
